@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Homepage</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body
+    style="background-image: url('https://steamuserimages-a.akamaihd.net/ugc/948468807413774897/9514D743CDCF32FDC16B8CF3EC55E636C06FAB94/');"
+  >
+    <!-- image and intro to the page  -->
+    <h2>
+      JamJam!
+    </h2>
+    <h>
+      Come on over to this site and be able to search movie info and song
+      lyrics!
+    </h>
+
+    <!-- slideshow -->
+    <div class="slideshow-container" />
+
+    <!-- imgs for the slideshow -->
+    <div class="mySlides fade">
+      <img
+        src="https://media1.giphy.com/media/dTXAWFAgKqCTQaFyhX/giphy.gif"
+        style="width:50%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media3.giphy.com/media/kZz3PlLzwMu5OngrkV/200w.webp"
+        style="width:50%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media0.giphy.com/media/d8uo4O27yhCVqbbLHr/200.gif"
+        style="width:58%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media0.giphy.com/media/SRjuYN93Ty3ifJ9NDC/giphy.gif"
+        style="width:53%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media0.giphy.com/media/iDPTaAC0ZAFXoT8yXb/giphy.gif"
+        style="width:50%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media3.giphy.com/media/kHlVhcWx5H8Usm6sF1/200.gif"
+        style="width:66%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media3.giphy.com/media/iFmGOi3LqESY6BCHQP/200.gif"
+        style="width:66%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://64.media.tumblr.com/2c22293cec9e1be536b0bcfce7f4ab54/tumblr_otwbv1uGkv1uxvvvzo1_400.gifv"
+        style="width:90%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media3.giphy.com/media/KfGYeInVrTzRmFk7h7/giphy.gif"
+        style="width:90%"
+      />
+    </div>
+
+    <div class="mySlides fade">
+      <img
+        src="https://media3.giphy.com/media/lQJY68XCfr6k6sGsZv/giphy.gif"
+        style="width:90%"
+      />
+    </div>
+
+    <br />
+    <!-- dots for the slideshow -->
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <!-- script to automatically change imgs in slideshow -->
+    <script>
+      var slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace("active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 5000);
+      }
+    </script>
+
+    <hr />
+
+    <p>
+      On this website, you can use either use the Movie API to fetch information
+      about movies from IMDB; or you can use the Lyrics API to fetch song lyrics
+      from Spotify when you input the artist and song title.
+    </p>
+
+    <!-- Button to open the modal login form -->
+    <button
+      class="button"
+      onclick="document.getElementById('id01').style.display='block'"
+    >
+      Login
+    </button>
+
+    <p>
+      Created by Miriam, Olivia, Thanhbinh, and Tina
+    </p>
+
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span
+        onclick="document.getElementById('id01').style.display='none'"
+        class="close"
+        title="Close Modal"
+        >&times;</span
+      >
+
+      <!-- Modal Content -->
+      <form
+        class="modal-content animate"
+        action="/action_page.php"
+        onsubmit="return displayWelcome();"
+      >
+        <div class="imgcontainer">
+          <div class="slideshow"></div>
+        </div>
+
+        <div class="form"></div>
+        <h1 id="signin">Sign In Page!</h1>
+
+        <!-- The user enters their username-->
+        <label for="usrname"><b>Username</b></label>
+        <input
+          type="text"
+          id="usrname"
+          name="usrname"
+          placeholder="Username"
+          required
+        />
+        <br />
+
+        <!-- The user enters their password-->
+        <label for="pwd"><b>Password</b></label>
+        <input
+          type="password"
+          id="pwd"
+          name="pwd"
+          placeholder="Password"
+          required
+        />
+        <br />
+        <br />
+
+        <!-- The user selects their choice of either go use the Movie API or the Lyric API-->
+        <select name="redirections" id="redirections">
+          <option value="redirectionMovieAPI.html">Movie API</option>
+          <option value="redirectionLyricAPI.html">Lyric API</option>
+        </select>
+        <input type="submit" class="submit" value="SUBMIT" />
+
+        <div class="container" style="background-color:#f1f1f1">
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="button"
+          >
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
