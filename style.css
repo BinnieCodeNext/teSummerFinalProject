@@ -1,0 +1,370 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: "Playfair Display", serif;
+  margin: 2em;
+  text-align: center;
+  /*background-image: url("https://steamuserimages-a.akamaihd.net/ugc/948468807413774897/9514D743CDCF32FDC16B8CF3EC55E636C06FAB94/");*/
+}
+
+#body {
+  background-color: #ed8aa6;
+}
+
+h1 {
+  font-style: italic;
+  color: #f8e2ed;
+}
+
+#welcome {
+  font-family: "Amatic SC", cursive;
+  color: #f8e2ed;
+}
+
+#signin {
+  color: #ed8aa6;
+}
+
+#start {
+  color: #f8e2ed;
+}
+
+#choosemovie {
+  color: pink;
+}
+
+.choosemoviedesc {
+  color: #914c55;
+}
+
+/*Here is this just in case we use a frame*/
+
+.frame {
+  box-shadow: 5px 10px 18px #888888;
+  display: inline-block;
+  background: #f2f2f2;
+  padding: 10px;
+  margin: 10px;
+
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/*end of frame*/
+
+/*slideshow start and classes*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons*/
+.prev,
+.next {
+  cursor: pointer;
+  position: center;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/*able to press the button to the right*/
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/*hover, add a black background */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*for the text*/
+.text {
+  color: #803b20;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  top: -4%;
+  right: -1%;
+  width: 100%;
+  text-align: center;
+}
+
+/*number of the images in the slide show*/
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/*Dot's of the image numbers*/
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/*fading in back ground animation*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/*end*/
+
+/*image for the slideshow size*/
+
+.imagething {
+  width: 600px;
+}
+
+/* The code for animating the fancy login start*/
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* The code for animating the fancy login end*/
+
+/* our class 'start' for the redirectionLyricAPI.html & redirectionMovieAPI.html start */
+.start {
+  color: white;
+  background-color: #803b20;
+}
+/* our class 'start' for the redirectionLyricAPI.html & redirectionMovieAPI.html end */
+
+/* id for the yugi's your move gif start */
+.urMove {
+  height: 75px;
+  float: right;
+}
+/* id for the yugi's your move gif end */
+
+#lyricfinderdescription {
+  background-color: white;
+}
+
+/*slideshow*/
+.slideshow {
+  /*   border: 2px solid red ; */
+  width: 200px;
+  height: 190px;
+  margin: auto;
+  background-image: url(https://media.tenor.com/images/6870fd2f3f7be6bc6f08083a899c4889/tenor.gif);
+  animation: fadepics 5s infinite;
+}
+/*This is what makes the images fade*/
+@keyframes fadepics {
+  0%: {
+    background-image: url(https://media.tenor.com/images/6870fd2f3f7be6bc6f08083a899c4889/tenor.gif);
+  }
+  10% {
+    opacity: 2%;
+    background-image: url(https://i.pinimg.com/originals/e2/e2/2d/e2e22d7fdd9fb9e7d8ef613212ec95de.gif);
+  }
+  20% {
+    opacity: 1%;
+    background-image: url(https://media.giphy.com/media/f4V2mqvv0wT9m/giphy.gif);
+  }
+}
+
+/*----*/
+h4 {
+  background-color: white;
+  font-size: 30px;
+  color: goldenrod;
+}
+
+h5 {
+  font-size: 20px;
+  background-color: white;
+  color: cornflowerblue;
+}
+
+/*Option button's style*/
+option {
+  border-radius: 12px;
+  background-color: white;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 12px;
+  border-radius-color: #803b20;
+  background-color: #e1a8ab;
+  font-size: 20px;
+}
+
+.button:hover {
+  background-color: mistyrose;
+  color: black;
+}
+
+input {
+  background-color: white;
+  bourder-radius: 8px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  font-family: "Antic Slab", serif;
+}
+
+#cancelbtn {
+  font-size: 15;
+}
+
+#song-lyrics {
+  color: black;
+  background-color: white;
+}
+
+h2 {
+  background-color: white;
+  color: #ed8aa6;
+}
+
+/* class for the title of the the movie start */
+.title {
+  font-style: normal;
+  font-weight: bold;
+  color: #54e5ff;
+  font-size: 60px;
+  text-decoration: underline overline;
+}
+.notTitle {
+  color: #ad59de;
+  font-size: 36px;
+}
+
+/* class for the user key of the movie */
+.usrKey {
+  font-weight: bold;
+  color: #58B1D1;
+}
+
+/* class for making spoilers of the plot */
+
+.plot {
+  font-size: 36px;
+  color: #ad59de;
+  border-radius: 25px;
+  background-color: #ad59de;
+}
+.plot:hover {
+  background-color: #adefd1;
+}
