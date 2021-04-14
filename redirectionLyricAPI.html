@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lyric finder homepage!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+
+  <!--log out and go back to log in page -->
+  <a href="index.html"
+    ><button class="button">
+      Log Out
+    </button></a
+  >
+
+  <!-- welcoming the user -->
+  <body
+    style="background-image: url('https://media.tenor.com/images/7fdc18d61ec340d45aa47ecb1f14d8e6/tenor.gif');"
+    onload="welcome()"
+  >
+    <div class="form">
+      <h1 style="color: #f8e2ed;" class="start">
+        Welcome to the song lyrics finder, <span id="welcome"> </span>!
+      </h1>
+    </div>
+    <main>
+      <!-- tells user about the site -->
+      <h2 id="lyricfinderdescription">
+        Wanna read and learn the lyrics to a song? Put in the artist and song of
+        your choice to see!
+      </h2>
+
+      <!--go to actual lyric finder page -->
+      <a href="lyric-page.html"
+        ><button class="button">
+          Click here!
+        </button></a
+      >
+      <!--slideshow -->
+      <div class="slideshow-container"></div>
+
+      <!--imgs for slideshow -->
+      <div class="mySlides fade">
+        <img
+          src="https://media2.giphy.com/media/cPIOOgb7pTxOFXdCdx/200w.webp"
+          style="width:30%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://media1.giphy.com/media/kcqppLUot3LOggSUdL/200w.webp"
+          style="width:30%"
+        />
+      </div>
+
+      <div class="mySlides fade">
+        <img
+          src="https://media0.giphy.com/media/cnRJE27U5iH0kma1mN/200w.webp"
+          style="width:30%"
+        />
+      </div>
+
+      <!--dots for slideshow -->
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <!--script to automatically change slides   -->
+      <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+          setTimeout(showSlides, 3250);
+        }
+      </script>
+    </main>
+  </body>
+</html>
