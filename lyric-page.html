@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lyric finder!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body
+    style="background-image: url('https://media.tenor.com/images/c7463075c551b137548f34f15ec656a3/tenor.gif');"
+  >
+    <main>
+      <!-- button that takes you to sign in page -->
+      <a href="index.html"
+        ><button class="button">
+          Log Out
+        </button></a
+      >
+
+      <!-- button that takes you to the home page of lyric finder  -->
+      <a href="redirectionLyricAPI.html"
+        ><button class="button">
+          Lyric Finder Home Page
+        </button></a
+      >
+
+      <!--    a container for the lyric finder     -->
+      <div class="container">
+        <h4>
+          Retrieve the lyrics of a song!
+        </h4>
+        <!--tells the user where to insert the artist and song name-->
+        <!--the button will reveal the lyrics when pressed-->
+        <input id="artist" placeholder="Artist" />
+        <input id="song" placeholder="Song" />
+        <button class="button" onclick="getLyrics()">
+          Get Lyrics
+        </button>
+        <br />
+        <div id="song-lyrics" class="data-output"></div>
+      </div>
+    </main>
+
+    <!--  buttons to take user to the movie page -->
+    <h5>
+      Checkout our Movie API with the button below ⬇⬇⬇
+    </h5>
+    <a href="redirectionMovieAPI.html"
+      ><button class="button">
+        Movie API
+      </button></a
+    >
+  </body>
+</html>
