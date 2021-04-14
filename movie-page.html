@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Movie API in Action</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <body style="background: #adefd1;">
+    <p style="color:white">
+      <!--  buttons to take user to different pages -->
+      <a href="index.html"
+        ><button class="button">
+          Log Out
+        </button></a
+      >
+
+      <a href="redirectionLyricAPI.html"
+        ><button class="button">
+          Lyric Finder
+        </button></a
+      >
+
+      <a href="redirectionMovieAPI.html"
+        ><button class="button">
+          Movie API homepage
+        </button></a
+      >
+    </p>
+
+    <main>
+      <div class="container">
+        <!-- The introduction paragraph to the movie page -->
+        <h1 id="choosemovie">
+          Welcome! It's now your turn to choose a movie.
+        </h1>
+        <p class="choosemoviedesc">
+          You can now go ahead enter your own movie, you an always add the year
+          but it's totally optional
+        </p>
+        <p class="choosemoviedesc">
+          and there will be seven options to choose from. Every one of the seven
+          options has at least two
+        </p>
+        <p class="choosemoviedesc">
+          facts about the movie. But every selection has the title (both
+          underlined and overlined),
+        </p>
+        <p class="choosemoviedesc">
+          and of course the poster of the movie you entered. Below is the key to
+          what you can choose to display.
+        </p>
+
+        <br />
+
+        <!-- Key for the user to choose from-->
+        <p class="usrKey">
+          Button 1: Title, Poster, Year, Rated, Released, Runtime, DVD
+        </p>
+        <p class="usrKey">
+          Button 2: Title, Poster, Director, Writer, Actors
+        </p>
+        <p class="usrKey">
+          Button 3: Tile, Poster, Language, Country
+        </p>
+        <p class="usrKey">
+          Button 4: Title, Poster, Metascore, IMBD Votes, IMBD ID
+        </p>
+        <p class="usrKey">
+          Button 5: Title, Poster, Box Office, Awards
+        </p>
+        <p class="usrKey">
+          Button 6: Title, Poster, Genre, Plot
+        </p>
+        <p class="usrKey">
+          Button 7: Displays everything above
+        </p>
+
+        <br />
+
+        <label for="movie"><b>Movie</b></label>
+        <input type="text" id="movie" placeholder="Movie" required />
+        <br />
+
+        <label for="year"><b>Year</b></label>
+        <input id="year" name="year" placeholder="Year" />
+
+        <br />
+        <br />
+        <select name="options" id="options">
+          <option name="option1" value="option1"> Option 1</option>
+          <option name="option2" value="option2"> Option 2</option>
+          <option name="option3" value="option3"> Option 3</option>
+          <option name="option4" value="option4"> Option 4</option>
+          <option name="option5" value="option5"> Option 5</option>
+          <option name="option6" value="option6"> Option 6</option>
+          <option name="option7" value="option7"> Option 7</option>
+        </select>
+
+        <br />
+
+        <input
+          onclick="optionSelection()"
+          type="submit"
+          class="submit"
+          value="SUBMIT"
+        />
+        <div id="movie-output" class="data-output"></div>
+      </div>
+    </main>
+  </body>
+</html>
