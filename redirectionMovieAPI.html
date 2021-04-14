@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Movie API homepage</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+  </head>
+  <div id="body1"></div>
+
+  <a href="index.html"
+    ><button class="button">
+      Log Out
+    </button></a
+  >
+
+  <a href="redirectionLyricAPI.html"
+    ><button class="button">
+      Lyric Finder
+    </button></a
+  >
+
+  <body style="background: #a09ecb;" onload="welcome()">
+    <div class="form">
+      <h1>
+        Welcome <span id="welcome"> </span>! You chose to go try out our Movie
+        API.
+      </h1>
+      <h1>
+        For this page you can see some of the most popular anime films. Yeah
+        these are like the ten movies.
+      </h1>
+
+      <!-- 1/10 -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BZGRkOGMxYTUtZTBhYS00NzI3LWEzMDQtOWRhMmNjNjJjMzM4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+          />
+        </div>
+
+        <!-- 2/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://images-na.ssl-images-amazon.com/images/I/712-5ZtU9YL._AC_SL1415_.jpg"
+          />
+        </div>
+
+        <!-- 3/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BNDI5ODBhYzMtNDc4Yi00NjEwLWJiZWUtMGE2Mzc4MGVjN2E0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg"
+          />
+        </div>
+
+        <!-- 4/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://vignette.wikia.nocookie.net/kiminonawa/images/6/62/Kimi-no-Na-wa.-Visual.jpg/revision/latest/scale-to-width-down/340?cb=20160927170951"
+          />
+        </div>
+
+        <!-- 5/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BYWJjMGIyNGYtMzlkZC00NWEyLTk5OTctMTgwNTIxOWFjZWMzXkEyXkFqcGdeQXVyNDQxNjcxNQ@@._V1_UY1200_CR109,0,630,1200_AL_.jpg"
+          />
+        </div>
+
+        <!-- 6/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BYjViOWY3YTQtNTliOC00NzkwLTllMGMtMjNiZTU0MmZjZTgzXkEyXkFqcGdeQXVyODgzNTQ1NTU@._V1_.jpg"
+          />
+        </div>
+
+        <!-- 7/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BYmVkZjU5NWYtNmVhNC00Y2FjLWFiZGUtZGRlMzk3M2YzYmI5XkEyXkFqcGdeQXVyMTk2MDc1MjQ@._V1_.jpg"
+          />
+        </div>
+
+        <!-- 8/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BOTYyYjAxNDgtNjEwYi00ZjY0LTk2ZDAtOTBiZTVjMmZkYjk3XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_.jpg"
+          />
+        </div>
+
+        <!-- 9/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://d32qys9a6wm9no.cloudfront.net/images/movies/poster/af/56deceddfd61d64fbc46a7748d09c31d_500x735.jpg?t=1565050327"
+          />
+        </div>
+
+        <!-- 10/10 -->
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            class="imagething"
+            src="https://m.media-amazon.com/images/M/MV5BZDllOWY5YWUtOTU4NC00YTUwLWJmYzktMGE5ZjY1NWI2ZmM4XkEyXkFqcGdeQXVyNTEyMDY1MjI@._V1_.jpg"
+          />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+      </div>
+
+      <!--used for the slide show to be able to work for the images in the start, this is the start-->
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+    </div>
+
+    <h1 style="color: #f2f542; font-style: normal;">
+      Below, on the right side corner there's a gif of Yugi from Yu-Gi-Oh,
+      saying "Your Move". There click on the button and it will redirect to a
+      page, where you add in the title of the movie and the year (which is
+      optional). So go ahead on the and click on the button. After clicking on
+      it there will be another set of information. 😊😊
+    </h1>
+
+    <br />
+    <hr />
+    <a href="movie-page.html">
+      <button class="urMove">
+        <img
+          class="urMove"
+          src="https://media.tenor.com/images/0fbf2e5a51b132c35f4f16adb60e3144/tenor.gif"
+        />
+      </button>
+    </a>
+  </body>
+</html>
